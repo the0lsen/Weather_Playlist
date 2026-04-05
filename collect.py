@@ -1,4 +1,22 @@
+"""
+collect.py
+----------
+Pull a user's recent Spotify listening history, fetch the weather that
+was occurring at their location at each listen time, extract track genres,
+and append everything to dataset.csv.
 
+Note: Spotify's audio-features endpoint (valence, energy, tempo etc.) was
+restricted in late 2024 and now returns 403 for Development mode apps.
+This version collects genres + weather only, which is sufficient to train
+the genre classifier. Audio feature targets in predict.py use hardcoded
+fallbacks per weather family.
+
+Run this periodically (or share with friends) to build up training data.
+The more users and sessions, the better the model.
+
+Usage:
+    python collect.py
+"""
 
 import os
 import csv
