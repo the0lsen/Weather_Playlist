@@ -1,0 +1,31 @@
+# Credentials & secrets
+.env
+
+# Personal listening data & location
+dataset.csv
+
+# Spotify OAuth token cache
+.spotify_cache_*
+
+# Trained model files (large binaries, regenerate with train.py)
+model/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Evaluation output (generated, not source)
+evaluation.png
